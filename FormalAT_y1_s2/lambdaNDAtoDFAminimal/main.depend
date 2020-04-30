@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1588270743 source:c:\users\usurelu florian\desktop\temalfa\main\main.cpp
+	"transform.cpp"
+
+1588270980 c:\users\usurelu florian\desktop\temalfa\main\transform.cpp
+	"transform.h"
+
+1588270787 c:\users\usurelu florian\desktop\temalfa\main\transform.h
+	"nod.h"
+
+1588263055 c:\users\usurelu florian\desktop\temalfa\main\include.h
+	<bits/stdc++.h>
+
+1588266484 c:\users\usurelu florian\desktop\temalfa\main\nod.h
+	"include.h"
+

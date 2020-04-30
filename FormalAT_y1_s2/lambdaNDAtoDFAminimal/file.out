@@ -1,0 +1,79 @@
+tip = Lambda-NFA
+Numarul de stari este 5
+Numarul de tranzitii este 7
+
+Tranzitiile sunt:
+0 1 a
+0 2 lambda
+1 0 a
+2 4 a
+2 3 b
+3 2 b
+4 2 b
+Starea initiala este: 0
+
+Avem 1 stari finale:
+2 
+
+
+
+tip = NFA
+Numarul de stari este 5
+Numarul de tranzitii este 8
+
+Tranzitiile sunt:
+0 1 a
+0 4 a
+0 3 b
+1 0 a
+2 4 a
+2 3 b
+3 2 b
+4 2 b
+Starea initiala este: 0
+
+Avem 2 stari finale:
+0 2 
+
+
+
+tip = DFA
+Numarul de stari este 5
+Numarul de tranzitii este 8
+
+Tranzitiile sunt:
+0 1 a
+0 2 b
+1 0 a
+1 3 b
+2 3 b
+3 4 a
+3 2 b
+4 3 b
+Starea initiala este: 0
+
+Avem 2 stari finale:
+0 3 
+
+
+
+tip = DFA-MINIM
+Numarul de stari este 5
+Numarul de tranzitii este 8
+
+Tranzitiile sunt:
+0 1 a
+0 2 b
+1 0 a
+1 3 b
+2 3 b
+3 4 a
+3 2 b
+4 3 b
+Starea initiala este: 0
+
+Avem 2 stari finale:
+0 3 
+
+
+
