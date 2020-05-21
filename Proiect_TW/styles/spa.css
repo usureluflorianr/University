@@ -1,0 +1,18 @@
+.projects-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.project {
+    border-right: 2px solid green;
+    border-left: 2px solid green;
+    border-bottom: 2px solid green;
+    border-top: 2px solid green;
+    color: blue;
+    text-align: center;
+    margin-left: 2%;
+    margin-top: 2%;
+    width: 30%;
+    padding-bottom: 20px;
+}

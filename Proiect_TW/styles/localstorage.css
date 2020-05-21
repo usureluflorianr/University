@@ -1,0 +1,34 @@
+.inputMIC {
+    margin-left: 3%;
+    width: 90%;
+    margin-bottom: 20px;
+    padding: 7px;
+    height: 30px;
+    justify-content: center;
+}
+
+.inputMare {
+    margin-left: 3%;
+    width: 90%;
+    margin-bottom: 20px;
+    padding: 7px;
+    height: 100px;
+}
+
+fieldset {
+    margin-bottom: 20px;
+}
+
+.buttonClear {
+    font-size: 50px;
+    color: red;
+    margin-left: 15%;
+}
+
+.buttonThink {
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: green;
+    margin-left: 10%;
+}

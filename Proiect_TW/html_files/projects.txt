@@ -1,0 +1,15 @@
+<div id = "projects" class = "page">
+    <div class="skewed-header">
+    <div class="header-bg" style="background-image: url('images/backgrounds/project.jpg');"></div>
+
+    <div class="skewed-header-wrapper">
+        <div class="skewed-header-content">
+            <div class="heading-wrapper">
+                <h1 class = "usu">Projects</h1>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</div>

@@ -1,0 +1,65 @@
+<div id = "about" class = "page">
+<div class="skewed-header">
+    <div class="header-bg" style="background-image: url('images/backgrounds/poli.jpg');"></div>
+
+    <div class="skewed-header-wrapper">
+        <div class="skewed-header-content">
+            <div class="heading-wrapper">
+                <h1 class = "usu">About Us</h1>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="page-container">
+    <div class="content-wrapper">
+        <img src="images/about/mentorat.jpg" alt="mentorat" id="chef">
+
+        <p>Te-ai plictisit acasa? Iti oferim alternativa pentru a nu irosi timpul. In decursul a 3 saptamani vom organiza 3 runde/ teme de cate 4 ore. Prima runda se va desfasura pe 2 mai de la 10:00 la 14:00.
+            Dupa fiecare runda, vom intra pe Google Meets (vom posta link) si va vom prezenta solutiile problemelor, va vom prezenta si alte
+            probleme in afara de cele din runda si vom raspunde la intrebari (practic o pregatire).
+            Cand cele 3 runde se vor fi incheiat, vom selecta aleator 5 participanti in activitatile acestea (runde + editoriale), carora le vom oferi sansa unei simulari de interviu sau unei pregatiri individuale.
+            Publicul tinta: elevii de liceu sau studentii de facultate. De mentionat ca din cauza COVID-19, din ce in ce mai multe facultati iau in calcul admiterea pe baza de interviu.
+            Problemele din runda vor avea nivel de dificultate gradual de la foarte usor la greu (toate dificultatile regasindu-se in fiecare runda, rundele fiind concursuri virtuale pe www.infoarena.ro ).
+            De mentionat: aceste activitati sunt gratuite (putand participa in esenta orice doritor). Voluntarii care vor organiza sunt: Usurelu Florian, Chichirim Stelian si Vlasiu Flavius.
+            Cei ce sunt interesati, va rugam sa intrati in grupul de facebook dedicat acestui subiect: https://www.facebook.com/groups/2405237949767484</p>
+
+    </div>
+</div>
+
+<div class="spacer60"></div>
+
+<div class="squares-wrapper">
+    <div class="squares">
+        <div class="square">
+            <div class="img-wrapper">
+                <img src="images/about/cntv.jpg" alt="cntv">
+            </div>
+
+            <div class="square-text-wrapper">
+                <h2>Realitatea bate filmul din capul tau</h2>
+
+                <p>     iGorj este un proiect de conferin?e, întâlniri informale, al carui scopi este împarta?irea experien?elor subiective ?i academice, punerea în discu?ie a unor teme cu profund substrat educa?ional, profesional, social.</p>
+            </div>
+        </div>
+        <div class="square">
+            <div class="square-text-wrapper">
+                <h2>You don't get chances, you take them</h2>
+
+                <p>Felicitari echipei iGorj pentru premiul obtinut la Concursul International AGM! Echipa formata din Giovani Popescu, Mihai Popescu si Razvan Valentin se afla in clasamentul cumulat al celor 2 zile de competitie pe locul 9 din cele 27 echipe oficiale. Coordonatorul echipei este Prof. Eugen Nodea.
+                    De mentionat:
+                    -> iGorj a fost singura echipa oficiala care a rezolvat problema MousePad;
+                    -> in competitie au participat (neoficial, prin invitatie), echipe reprezentante ale universitatilor din Oxford, Bucuresti, Iasi, Cluj si Timisoara
+                    -> participarea celei de-a 2-a echipe gorjene RuntimeTerror, formata din Iulia Groza, Tedi Dinuta si Bogdan Prunescu; este prima editie din cele 6 de pana acum cand avem 2 echipe in finala
+                </p>
+            </div>
+
+            <div class="img-wrapper">
+                <img src="images/about/agm.jpg" alt="agm">
+            </div>
+        </div>
+    </div>
+</div>
+</div>
