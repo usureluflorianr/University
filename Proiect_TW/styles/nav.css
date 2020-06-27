@@ -1,16 +1,16 @@
-/* Common nav styles */
+/* Flexboxuri aici */
+
 .navigation-wrapper {
     height: 100px;
     background-color: #074a21;
     color: #cbcbcb;
-    /* Flexbox container */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 60px 100px;
 }
 
-/* Left column styles */
+
 .navigation-wrapper > .left-column {
     display: flex;
     align-items: center;

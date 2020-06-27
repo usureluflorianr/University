@@ -21,7 +21,7 @@ btnClear.onclick = function () {
 
 function getThoughts(){
     lsOutput.innerText= "";
-    for (let i = 0; i < localStorage.length; i++) {
+    for (let i = 1; i < localStorage.length; i++) {
         const key = localStorage.key(i);
         const value = localStorage.getItem(key);
 
@@ -31,3 +31,7 @@ function getThoughts(){
 }
 
 getThoughts();
+
+//AICI SUS E LOCALSTORAGE DE LA PROIECTUL DE LABORATOR
+
+//////////////////////////////////////////////////////////////////////////////////////////////

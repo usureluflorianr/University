@@ -15,6 +15,14 @@
     height: 100px;
 }
 
+.inputLogin {
+    margin-left: 20%;
+    width: 400px;
+    margin-bottom: 20px;
+    padding: 7px;
+    height: 50px;
+}
+
 fieldset {
     margin-bottom: 20px;
 }
@@ -31,4 +39,92 @@ fieldset {
     font-size: 30px;
     color: green;
     margin-left: 10%;
+}
+
+.buttonHide {
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-left: 60px;
+    color: red;
+}
+
+.buttonClr {
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-left: 60px;
+    color: blue;
+}
+
+.pp {
+
+    font-size: 200%;
+    color: blue;
+    font-family: "Sacramento", cursive;
+    text-align: center;
+}
+
+.pp2 {
+    font-size: 100%;
+    color: darkviolet;
+    font-family: "Cooper Black", cursive;
+    text-align: center;
+}
+
+.pisto {
+
+    font-size: 120%;
+    color: blueviolet;
+    font-family: "Comic Sans MS", cursive;
+    text-align: center;
+}
+
+.separator {
+    border-top: 30px solid yellow;
+    border-bottom: 30px solid purple;
+    width: 100%;
+}
+
+.inputBG {
+    margin-left: 45%;
+    margin-top: 50px;
+    width: 30%;
+    align-self: center;
+    margin-bottom: 50px;
+    padding: 7px;
+    height: 30px;
+    justify-content: center;
+}
+
+.buttonBG {
+    font-size: 40px;
+    color: purple;
+    margin-left: 20%;
+    margin-bottom: 50px;
+}
+
+.inputCodif {
+    margin-left: 10%;
+    margin-top: 50px;
+    width: 30%;
+    align-self: center;
+    margin-bottom: 50px;
+    padding: 7px;
+    height: 30px;
+    justify-content: center;
+}
+
+.ls {
+    display: inline;
+    position: relative;
+    font: 200px Helvetica, Sans-Serif;
+    letter-spacing: -5px;
+    color: rgba(0,0,255,0.5);
+}
+
+.ls:after {
+    content: "Hello";
+    position: absolute; left: 10px; top: 5px;
+    color: rgba(255,0,0,0.5);
 }

@@ -62,6 +62,50 @@ app.delete("/projects/:id", function(req, res){
     res.send(data);
 })
 
+///////////////////////////////////////
+
+app.get("/login", function(req, res){
+    let data = JSON.parse(fs.readFileSync("data/login.json"));
+    res.send(data);
+})
+
+app.post("/login", function(req, res){
+    var data = JSON.parse(fs.readFileSync("data/login.json"));
+    data.push({
+        "username":req.body.username,
+        "parola":req.body.parola,
+        "ip":req.body.ip,
+        "visits":req.body.visits,
+        "time":req.body.time
+    });
+    fs.writeFileSync("data/login.json", JSON.stringify(data));
+    res.send(data);
+})
+
+app.put("/login/:id", function(req, res){
+    var data = JSON.parse(fs.readFileSync("data/login.json"));
+
+    if(data.body.username!=null) data[req.params.id].username = req.body.username;
+    if(data.body.parola!=null) data[req.params.id].parola = req.body.parola;
+    if(data.body.ip!=null) data[req.params.id].ip = req.body.ip;
+    if(data.body.visits!=null) data[req.params.id].visits = req.body.visits;
+    if(data.body.time!=null) data[req.params.id].time = req.body.time;
+
+    fs.writeFileSync("data/projects.json", JSON.stringify(data));
+    res.send(data);
+})
+
+app.delete("/login/:id", function(req, res){
+    let data = JSON.parse(fs.readFileSync("data/login.json"));
+    delete data[req.params.id];
+    console.log(req.params.id);
+    data.splice(req.params.id, 1);
+    fs.writeFileSync("data/login.json", JSON.stringify(data));
+    res.send(data);
+})
+
+//////////////////////////////
+
 function link_file(file_path, get_path = null){
     if(get_path==null){
         file_path.split("/").forEach(function(dir){

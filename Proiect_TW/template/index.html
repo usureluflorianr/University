@@ -34,7 +34,7 @@
 
 
 </head>
-<body>
+<body id="corp">
 <header>
 <div class="navigation-wrapper">
 
@@ -93,9 +93,6 @@
             </a>
         </div>
     </div>
-    <aside>
-        iGorj
-    </aside>
 
 </div>
 </header>
@@ -188,7 +185,7 @@
         <div class="squares">
             <div class="square">
                 <div class="img-wrapper">
-                    <img src="images/about/cntv.jpg" alt="cntv">
+                    <img src="images/about/cntv.jpg" alt="cntv" id="chef2">
                 </div>
 
                 <div class="square-text-wrapper">
@@ -210,9 +207,11 @@
                 </div>
 
                 <div class="img-wrapper">
-                    <img src="images/about/agm.jpg" alt="agm">
+                    <img src="images/about/agm.jpg" alt="agm" id="chef3">
                 </div>
             </div>
+            <button class="buttonThink" type="button" id="ascunde_img"></button>
+            <br><br><br><br><br>
         </div>
     </div>
 </div>
@@ -304,6 +303,9 @@
 <!--PROJECTS AICI-->
 
 
+<div>
+        
+</div>
 
 <div id = "projects" class = "page">
     <div class="skewed-header">
@@ -319,6 +321,20 @@
         </div>
 
     </div>
+
+    <div>
+        <h2>Intra in cont</h2>
+        <input class="inputLogin" id="inpUser" type="text" placeholder="Enter Username...">
+        <button class="buttonThink" type="button" id="btnLogin">Login</button>
+        <br>
+        <input class="inputLogin" id="inpPass" type="text" placeholder="Enter Password...">
+        <button class="buttonThink" type="button" id="btnCreate">Create</button>
+        <br>
+        <p id="msjLogin" class="pp2"></p>
+    </div>
+
+    <div class="separator"></div>
+
     <div>
         <div class="projects-container" id="projects-body">
 
@@ -334,6 +350,7 @@
         </fieldset>
     </div>
 
+    <div class="separator"></div>
 
     <div class>
         <h2 id="title">Ganduri de la tine pentru tine</h2>
@@ -360,18 +377,94 @@
 
     </div>
 
+    <div>
+
+        <div class="separator"></div>
+
+    <h2 id="titleInpNum">Cat de mult iti place de noi?</h2>
+
+        <!--CALCULATORUL PLACERII-->
+
+    <fieldset>
+        <legend>Calculatorul placerii</legend>
+        <input class="inputMIC" id="inpNum" type="text" placeholder="Enter Pleasure Index...">
+        <br>
+
+        <button class="buttonThink" type="button" id="btnNum_10x">10x</button>
+        <button class="buttonThink" type="button" id="btnNum_x^2">x^2</button>
+        <button class="buttonThink" type="button" id="btnNum_x^3">x^3</button>
+        <button class="buttonThink" type="button" id="btnNum_sqrt">sqrt</button>
+        <button class="buttonThink" type="button" id="btnNum_x!">x!</button>
+    </fieldset>
+
+        <div id="pleasure_list">
+
+        </div>
+    </div>
+
+    <br><br><br>
+
 </div>
 
+<div class="separator"></div>
 
+<div>
+    <h2> In cat timp vei dori sa fii voluntar </h2>
+    <p id="countdown" class="pp"></p>
+</div>
+
+<div class="separator"></div>
+
+<div>
+    <h2> Citatul momentului </h2>
+    <p id="citat" class="pp"></p>
+</div>
+
+<div class="separator"></div>
+
+<div>
+    <h2 id="tita"></h2>
+    <input class="inputBG" id="inpBG" type="text" placeholder="Enter BGcolor...">
+    <button class="buttonBG" type="button" id="btnBG">Seteaza culoarea fundalului</button>
+</div>
+
+<div class="separator"></div>
+
+<div>
+    <h2>Decodificati cryptarea</h2>
+    <input class="inputCodif" id="inpCodif" type="text" placeholder="Enter password aa#zz#ll...">
+    <fieldset>
+        <p id="codif"></p>
+    </fieldset>
+</div>
+
+<div class="separator"></div>
+
+<div>
+    <h2>Spune-ne cand e ziua ta si-ti spunem varsta exacta!</h2>
+    <input class="inputCodif" id="inpAge" type="text" placeholder="Enter zi#luna#an...">
+    <button class="buttonThink" id="btnAge">GET AGE</button>
+    <p class="pp" id="age"></p>
+</div>
+
+<div class="separator"></div>
+
+<div>
+    <h2>Afla activitatea ta pe site</h2>
+    <button class="buttonThink" id="btnIst">GET ACTIVITY</button>
+    <button class="buttonHide" id="btnIst2">HIDE ACTIVITY</button>
+    <button class="buttonClr" id="btnIst3">CLEAR ACTIVITY</button>
+    <p class="pisto" id="pist"></p>
+</div>
 
 <!--FOOTER AICI-->
 
 
 <footer>
 <div class="footer">
-    <div class="logo-footer">
+    <!--<div class="logo-footer">
         <img src="images/logos/logoGJ.png" alt="Logo">
-    </div>
+    </div>-->
 
     <br>
 
@@ -400,12 +493,18 @@
     <div class="copyright-wrapper">
         &copy; 2020 usu-the-man &#124; All rights reserved
     </div>
+
+    <div>
+        <p id="lstime"></p>
+    </div>
+
 </div>
 </footer>
 
 <script type="text/javascript" src="js/localstorage.js"></script>
-<script src="js/primu.js"></script>
-
+<script type="text/javascript" src="js/final.js"></script>
+<script type="text/javascript" src="js/primu.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
 
 </body>
 </html>

@@ -1,156 +1,120 @@
-const btnAdd = document.getElementById("btnAdd");
-const inpProj = document.getElementById("inpProj");
-const inpText = document.getElementById("inpText");
+//AICI AM ISTORICUL EVENIMETELOR PE SITE, TASK 12 NIVEL 3
 
-var editNow = 0;
-var chichi = 0; //id-ul unde voi edita
+let istoric = [];
 
-function httpGet(theUrl)
-{
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
-}
+const btnIst = document.getElementById("btnIst");
+const pist = document.getElementById("pist");
+const btnIst2 = document.getElementById("btnIst2");
 
-function httpDelete(theUrl) {
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "DELETE", theUrl, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
-}
+document.addEventListener('keypress', logKey);
 
-function deleteProject(id){
-    httpDelete("/projects/"+id);
-    getProjects();
-}
+function logKey(e) {
+    var n = new Date(Date.now());
+    var y = (n.getFullYear()).toString();
+    var m = (n.getMonth() + 1).toString();
+    var d = (n.getDate()).toString();
 
-function editProject(id, project) {
-    document.getElementById("inpProj").value = project.name;
-    document.getElementById("inpText").value = project.description;
-    window.editNow = 1;
-    window.chichi = id;
-}
+    var ev_lg = "";
 
-function getProjects() {
-    var projects = JSON.parse(httpGet("/projects"));
-    var container = document.getElementById("projects-body");
-    container.innerText = "";
+    if(m.length < 2) m = '0' + m;
 
-    for(var i=0;i<projects.length;i++){
+    if(d.length < 2) d = '0' + d;
 
-        let project = projects[i];
-        var el = document.createElement("div");
-        el.classList.add("project");
-        var title = document.createElement("h2");
-        title.textContent = project.name;
-        el.appendChild(title);
-        var description = document.createElement("h4");
-        description.textContent = project.description;
-        el.appendChild(description);
-        /*var image = document.createElement("img");
-        image.src = project.image;
-        el.appendChild(image);*/
+    ev_lg = ev_lg + y + "/" + m + "/" + d;
 
-        var deleteButton = document.createElement("button");
-        deleteButton.id = i;
-        deleteButton.innerText = "Delete";
-        deleteButton.addEventListener('click', function(){
-            deleteProject(this.id);
-        });
-        el.appendChild(deleteButton);
+    var m = n.toString();
 
-        var editButton = document.createElement("button");
-        editButton.id = i;
-        editButton.innerText = "Edit";
-        editButton.addEventListener('click',function () {
-            editProject(this.id, project);
+    var orelg = 0;
+    var minutelg = 0;
+    var secundelg = 0;
 
-            /*projects[usu.id].name = usu.name;
-            projects[usu.id].description = usu.description;
+    let poz = 0;
 
-            for(var j=0;j<projects.length;j++)
-            {
-                httpDelete("/projects/"+toString(j));
-                httpPost("/projects", {name: projects[j].name , description: projects[j].description});
-            }*/
-            getProjects();
-        });
-
-        el.appendChild(editButton);
-        container.appendChild(el);
-    }
-}
-
-getProjects();
-
-
-function addElem(){
-    var title = inpProj.value;
-    var textProj = inpText.value;
-    httpPost("/projects", {name: title , description: textProj});
-    document.getElementById("inpProj").value = null;
-    document.getElementById("inpText").value = null;
-
-    getProjects();
-}
-
-btnAdd.onclick = function () {
-    if(window.editNow == 0)
-    {
-        if(document.getElementById("inpProj").value == "chichi" && document.getElementById("inpText").value == "darius si tifui")
-        {
-            if(confirm('Pe bune?')) {
-                document.getElementById("inpProj").value = "Pazea...";
-                document.getElementById("inpText").value = "pazea ca vine baiatu";
-                addElem();
-            }
+    for (var i = 0; i < m.length; ++i) {
+        if (m[i] == ":") {
+            poz = i;
+            break;
         }
-        else if(document.getElementById("inpProj").value != "")
-            if(document.getElementById("inpText").value != "")
-                addElem();
     }
-    else
+
+    ev_lg = ev_lg + " " + m[poz - 2] + m[poz - 1] + m[poz] + m[poz + 1] + m[poz + 2] + m[poz + 3] + m[poz + 4] + m[poz + 5];
+
+    if(e.code == "KeyA")
     {
-        window.editNow = 0;
+        ev_lg += " keypress, tasta A";
+        istoric.push(ev_lg);
+    }
 
-        var projects = JSON.parse(httpGet("/projects"));
+    if(e.code == "Space")
+    {
+        ev_lg += " keypress, tasta Space";
+        istoric.push(ev_lg);
+    }
 
-        if(document.getElementById("inpProj").value != "" && document.getElementById("inpText").value != "") {
+    if(e.code == "Enter")
+    {
+        ev_lg += " keypress, tasta Enter";
+        istoric.push(ev_lg);
+    }
 
-                projects[chichi].name = document.getElementById("inpProj").value;
-                projects[chichi].description = document.getElementById("inpText").value;
+}
+document.addEventListener("click", myFunction);
 
-                for (var j = 0; j < projects.length; j++) {
-                    httpDelete("/projects/" + toString(j));
-                    httpPost("/projects", {name: projects[j].name, description: projects[j].description});
-                }
+function myFunction(e) {
 
-                document.getElementById("inpProj").value = null;
-                document.getElementById("inpText").value = null;
+    var n = new Date(Date.now());
+    var y = (n.getFullYear()).toString();
+    var m = (n.getMonth() + 1).toString();
+    var d = (n.getDate()).toString();
 
-                getProjects();
-            }
-        else window.editNow = 1;
+    var ev_lg = "";
+
+    if(m.length < 2) m = '0' + m;
+
+    if(d.length < 2) d = '0' + d;
+
+    ev_lg = ev_lg + y + "/" + m + "/" + d;
+
+    var m = n.toString();
+
+    var orelg = 0;
+    var minutelg = 0;
+    var secundelg = 0;
+
+    let poz = 0;
+
+    for (var i = 0; i < m.length; ++i) {
+        if (m[i] == ":") {
+            poz = i;
+            break;
+        }
+    }
+
+    ev_lg = ev_lg + " " + m[poz - 2] + m[poz - 1] + m[poz] + m[poz + 1] + m[poz + 2] + m[poz + 3] + m[poz + 4] + m[poz + 5];
+
+    ev_lg = ev_lg + " click, coord " + e.clientX + " " + e.clientY;
+    istoric.push(ev_lg);
+}
+
+btnIst.onclick = function(){
+    pist.innerHTML = "";
+    for (var i = 0; i < istoric.length; ++i)
+    {
+        pist.innerHTML += istoric[i] + "<br>";
     }
 }
 
-//httpPut("/projects", {name: title, description: text});
-
-function httpPost(theUrl, data)
-{
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "POST", theUrl, false ); // false for synchronous request
-    xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xmlHttp.send( "name="+data.name+"&description="+data.description  );
-    return xmlHttp.responseText;
+btnIst2.onclick = function(){
+    pist.innerHTML = "";
 }
 
-function httpPut(theUrl, data)
-{
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "PUT", theUrl, false ); // false for synchronous request
-    xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xmlHttp.send( "name="+data.name+"&description="+data.description  );
-    return xmlHttp.responseText;
+const btnIst3 = document.getElementById("btnIst3");
+
+btnIst3.onclick = function(){
+    pist.innerHTML = "";
+    istoric = [];
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
